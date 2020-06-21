@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>975</width>
+    <height>575</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>975</width>
+    <height>575</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>975</width>
+    <height>575</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Лабораторная работа №4</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>425</x>
+      <y>25</y>
+      <width>541</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
+    <property name="interactive">
+     <bool>false</bool>
+    </property>
+    <property name="viewportUpdateMode">
+     <enum>QGraphicsView::SmartViewportUpdate</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>5</y>
+      <width>411</width>
+      <height>566</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="horizontalSpacing">
+      <number>5</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>1</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item row="0" column="0" colspan="2">
+      <widget class="QGroupBox" name="groupBoxChooseAlg">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>399</width>
+         <height>140</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>399</width>
+         <height>140</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Выбор алгоритма</string>
+       </property>
+       <widget class="QRadioButton" name="radioButtonKanonYr">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>371</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Каноническое уравнение</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButtonParamYr">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>361</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Параметрическое уравнение</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButtonBres">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>311</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Алгоритм Брезенхема</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButtonSredToch">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>381</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Алгоритм средней точки</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButtonLib">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>336</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Библиотечный алгоритм</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QGroupBox" name="groupBoxDrawCircle">
+       <property name="minimumSize">
+        <size>
+         <width>196</width>
+         <height>296</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>196</width>
+         <height>296</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Построение окружности</string>
+       </property>
+       <widget class="QLineEdit" name="lineEditStartX">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>50</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStartCoords">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>176</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Координаты центра</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelX">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>50</y>
+          <width>16</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>X:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelY">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>50</y>
+          <width>16</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Y:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditStartY">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>50</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonDrawCircle">
+        <property name="geometry">
+         <rect>
+          <x>2</x>
+          <y>125</y>
+          <width>191</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Построить окружность</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditR">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>75</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelR">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>75</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Радиус:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonDrawSpecCirc">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>260</y>
+          <width>191</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Построить спектр окр.</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelCount">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>235</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Кол-во окр:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditStepR">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>210</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStepR">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>210</y>
+          <width>116</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Шаг изменения R:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStartR">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>160</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Начальный R:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditEndR">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>185</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditCount">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>235</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelEndR">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>185</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Конечный R:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditStartR">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>160</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QGroupBox" name="groupBoxDrawEll">
+       <property name="minimumSize">
+        <size>
+         <width>196</width>
+         <height>296</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>196</width>
+         <height>296</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Построение эллипса</string>
+       </property>
+       <widget class="QLineEdit" name="lineEditStartXEll">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>50</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStartCoordsEll">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>176</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Координаты центра</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStartXEll">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>50</y>
+          <width>16</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>X:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStartYEll">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>50</y>
+          <width>16</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Y:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditStartYEll">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>50</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonDrawEll">
+        <property name="geometry">
+         <rect>
+          <x>2</x>
+          <y>125</y>
+          <width>191</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Построить эллипс</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditWidth">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>75</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelWidth">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>75</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Ширина эллипса:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonDrawSpecEll">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>260</y>
+          <width>191</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Построить спектр элл.</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelCountEll">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>235</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Кол-во эллипсов:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditStepEll">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>210</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStepEll">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>210</y>
+          <width>116</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Шаг изменения:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStartWidth">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>160</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Нач. ширина:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditStartHeight">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>185</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditCountEll">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>235</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelStartHeight">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>185</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Нач. высота:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditStartWidth">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>160</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditHeight">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>100</y>
+          <width>66</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelHeight">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>100</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="text">
+         <string>Высота эллипса:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QGroupBox" name="groupBoxChooseColour">
+       <property name="minimumSize">
+        <size>
+         <width>196</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>196</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Выбор цвета линии</string>
+       </property>
+       <widget class="QRadioButton" name="radioButtonBlack">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>176</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Чёрный</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButtonWhite">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>55</y>
+          <width>176</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Белый</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QGroupBox" name="groupBoxResearch">
+       <property name="minimumSize">
+        <size>
+         <width>196</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>196</width>
+         <height>90</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Исследования</string>
+       </property>
+       <widget class="QPushButton" name="pushButtonTimeCirc">
+        <property name="geometry">
+         <rect>
+          <x>2</x>
+          <y>25</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сравнение времени окр.</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonTimeEll">
+        <property name="geometry">
+         <rect>
+          <x>2</x>
+          <y>55</y>
+          <width>191</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сравнение времени элл.</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QPushButton" name="pushButtonScreenClean">
+       <property name="minimumSize">
+        <size>
+         <width>411</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>411</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Очистить экран</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelEndX_18">
+    <property name="geometry">
+     <rect>
+      <x>425</x>
+      <y>5</y>
+      <width>186</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>Рабочее пространство</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditStartX</tabstop>
+  <tabstop>lineEditStartY</tabstop>
+  <tabstop>lineEditR</tabstop>
+  <tabstop>lineEditStartR</tabstop>
+  <tabstop>lineEditEndR</tabstop>
+  <tabstop>lineEditStepR</tabstop>
+  <tabstop>lineEditCount</tabstop>
+  <tabstop>lineEditStartXEll</tabstop>
+  <tabstop>lineEditStartYEll</tabstop>
+  <tabstop>lineEditWidth</tabstop>
+  <tabstop>lineEditHeight</tabstop>
+  <tabstop>lineEditStartWidth</tabstop>
+  <tabstop>lineEditStartHeight</tabstop>
+  <tabstop>lineEditStepEll</tabstop>
+  <tabstop>lineEditCountEll</tabstop>
+  <tabstop>pushButtonDrawEll</tabstop>
+  <tabstop>radioButtonLib</tabstop>
+  <tabstop>pushButtonDrawSpecEll</tabstop>
+  <tabstop>pushButtonDrawCircle</tabstop>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>radioButtonSredToch</tabstop>
+  <tabstop>pushButtonTimeEll</tabstop>
+  <tabstop>pushButtonTimeCirc</tabstop>
+  <tabstop>radioButtonKanonYr</tabstop>
+  <tabstop>pushButtonDrawSpecCirc</tabstop>
+  <tabstop>radioButtonWhite</tabstop>
+  <tabstop>radioButtonParamYr</tabstop>
+  <tabstop>radioButtonBres</tabstop>
+  <tabstop>radioButtonBlack</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
